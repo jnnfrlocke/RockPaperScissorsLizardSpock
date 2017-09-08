@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class Rock : Gesture
+    public class Player
     {
+        public string name;
+        public string playerType;
+        public int playerWins;      
     }
+
 }

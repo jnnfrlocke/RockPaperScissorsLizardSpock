@@ -1,1 +1,6 @@
 c:\users\jnnfr\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\bin\Debug\RockPaperScissorsLizardSpock.exe.config
+C:\Users\jnnfr\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\bin\Debug\RockPaperScissorsLizardSpock.exe
+C:\Users\jnnfr\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\bin\Debug\RockPaperScissorsLizardSpock.pdb
+C:\Users\jnnfr\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.csprojResolveAssemblyReference.cache
+C:\Users\jnnfr\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.exe
+C:\Users\jnnfr\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.pdb
