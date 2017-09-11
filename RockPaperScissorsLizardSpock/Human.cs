@@ -12,6 +12,7 @@ namespace RockPaperScissorsLizardSpock
         {
             this.name = name;
             playerWins = 0;
+        
         }
 
         

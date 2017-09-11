@@ -14,10 +14,12 @@ namespace RockPaperScissorsLizardSpock
             playerWins = 0;
         }
 
-        public override void MakeChoice()
+        public override string MakeChoice()
         {
             Random rnd = new Random();
             int choice = rnd.Next(1, 6);
+            string computerChoice = Game.rules[choice];
+            return computerChoice;
         }
     }
 }

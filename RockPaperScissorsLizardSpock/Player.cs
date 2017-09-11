@@ -12,10 +12,11 @@ namespace RockPaperScissorsLizardSpock
         public int playerWins;
         public string choice;
                 
-        public virtual void MakeChoice()
+        public virtual string MakeChoice()
         {
             Console.WriteLine("Choose from one of the options. And make sure your opponent isn't watching!");
             string choice = Console.ReadLine().ToLower();
+            return choice;
             
         }  
     }
