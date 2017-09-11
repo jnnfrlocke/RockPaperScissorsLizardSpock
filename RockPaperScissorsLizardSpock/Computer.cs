@@ -18,7 +18,7 @@ namespace RockPaperScissorsLizardSpock
         {
             Random rnd = new Random();
             int choice = rnd.Next(1, 6);
-            string computerChoice = Game.choices[choice];
+            string computerChoice = Game.choices[choice-1];
             return computerChoice;
         }
     }

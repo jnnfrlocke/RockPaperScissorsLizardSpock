@@ -14,7 +14,7 @@ namespace RockPaperScissorsLizardSpock
                 
         public virtual string MakeChoice()
         {
-            Console.WriteLine("Choose from one of the options. And make sure your opponent isn't watching!");
+            Console.WriteLine("Choose rock, paper, scissors, lizard, or spock. And make sure your opponent isn't watching!");
             string choice = Console.ReadLine().ToLower();
             return choice;
             
