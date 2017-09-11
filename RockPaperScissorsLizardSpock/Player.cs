@@ -14,8 +14,9 @@ namespace RockPaperScissorsLizardSpock
                 
         public virtual void MakeChoice()
         {
-            Console.WriteLine("Make a choice!");
-            choice = Console.ReadLine().ToLower();
+            Console.WriteLine("Choose from one of the options. And make sure your opponent isn't watching!");
+            string choice = Console.ReadLine().ToLower();
+            
         }  
     }
 

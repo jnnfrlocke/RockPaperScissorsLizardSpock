@@ -46,26 +46,20 @@ namespace RockPaperScissorsLizardSpock
             }
             else if(numberOfPlayers == 2)
             {
-                Console.WriteLine("Please enter a name for Player two.");
+                Console.WriteLine("Please enter a name for player two.");
                 playerOne = new Human(enteredName);
                 playerTwo = new Human(Console.ReadLine());
             }
+        }   
+        
+        public void CompareChoices()
+        {
+            //if (Human.choice == )
         }
-            
+                 
         }
 
 
-        //public void RunGame()
-        //{
-        //    IntroduceGame();
-            
-        //}
-
-
-        //public void GamePlay(Human currentPlayer, Computer opponent)
-        //{
-        //    Console.WriteLine($"{currentPlayer.name}, type one of the gestures (rock, paper, scissors, lizard, or Spock) to take your first turn. And make sure {opponent.name} isn't looking!");
-        //}
     }
 
 

@@ -14,6 +14,6 @@ namespace RockPaperScissorsLizardSpock
             playerWins = 0;
         }
 
- 
+        
     }
 }

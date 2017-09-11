@@ -16,7 +16,8 @@ namespace RockPaperScissorsLizardSpock
 
         public override void MakeChoice()
         {
-
+            Random rnd = new Random();
+            int choice = rnd.Next(1, 6);
         }
     }
 }
