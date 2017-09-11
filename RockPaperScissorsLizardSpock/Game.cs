@@ -12,15 +12,14 @@ namespace RockPaperScissorsLizardSpock
         {
             IntroduceGame();
             SetUpPlayers(GetNumberOfPlayers());
-            playerOne.MakeChoice();
-            playerTwo.MakeChoice();
+            CompareChoices();
         }
 
         Player playerOne;
         Player playerTwo;
-        public static string[] rules = {"Scissors Cuts Paper", "Paper Covers Rock", "Rock Crushes Lizard", "Lizard Poisons Spock", "Spock Smashes Scissors", "Scissors Decapitates Lizard", "Lizard Eats Paper", "Paper Disproves Spock", "Spock Vaporizes Rock", "Rock Crushes Scissors" };
+        List<string> rules = new List<string>() { "Scissors Cuts Paper", "Paper Covers Rock", "Rock Crushes Lizard", "Lizard Poisons Spock", "Spock Smashes Scissors", "Scissors Decapitates Lizard", "Lizard Eats Paper", "Paper Disproves Spock", "Spock Vaporizes Rock", "Rock Crushes Scissors" };
 
-
+        public static string[] choices = { "rock", "paper", "scissors", "lizard", "spock" };
 
         public void IntroduceGame()
         {
@@ -58,7 +57,10 @@ namespace RockPaperScissorsLizardSpock
         
         public void CompareChoices()
         {
-            
+            string playerOneChoice = playerOne.MakeChoice();
+            string playerTwoChoice = playerTwo.MakeChoice();
+
+
         }
                  
         }
