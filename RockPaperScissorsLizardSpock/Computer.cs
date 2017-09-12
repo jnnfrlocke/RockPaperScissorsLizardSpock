@@ -10,7 +10,7 @@ namespace RockPaperScissorsLizardSpock
     {
         public Computer()
         {
-            this.name = "Talus";
+            this.name = "Talus, your virtual opponent";
             playerWins = 0;
         }
 
