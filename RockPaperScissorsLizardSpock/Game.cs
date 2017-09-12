@@ -11,7 +11,8 @@ namespace RockPaperScissorsLizardSpock
         public void RunGame()
         {
             IntroduceGame();
-            SetUpPlayers(GetNumberOfPlayers());
+            GetNumberOfPlayers();
+            SetUpPlayers(numberOfPlayers);
             CompareChoices();
         }
 
@@ -20,6 +21,8 @@ namespace RockPaperScissorsLizardSpock
         List<string> rules = new List<string>() { "Scissors Cuts Paper", "Paper Covers Rock", "Rock Crushes Lizard", "Lizard Poisons Spock", "Spock Smashes Scissors", "Scissors Decapitates Lizard", "Lizard Eats Paper", "Paper Disproves Spock", "Spock Vaporizes Rock", "Rock Crushes Scissors" };
 
         public static string[] choices = { "rock", "paper", "scissors", "lizard", "spock" };
+        int numberOfPlayers = 0;
+
 
         public void IntroduceGame()
         {
@@ -35,25 +38,36 @@ namespace RockPaperScissorsLizardSpock
         public int GetNumberOfPlayers()
         {
             Console.WriteLine("Choose 1 or 2 players");
-            int numberOfPlayers = 0;
+            
             try
             {
-                while (numberOfPlayers != 1 || numberOfPlayers != 2)
+                //while (numberOfPlayers != 1 || numberOfPlayers != 2)
+                //{
+                numberOfPlayers = int.Parse(Console.ReadLine());
+                if (numberOfPlayers == 1 || numberOfPlayers == 2)
                 {
-                    numberOfPlayers = int.Parse(Console.ReadLine());
-                    if (numberOfPlayers == 1 || numberOfPlayers == 2)
-                    {
-                        break;
-                    }
-                    Console.WriteLine("You typed " + numberOfPlayers + ". Please select 1 or 2");
+                    return numberOfPlayers;
                 }
-                    
-                return numberOfPlayers;
+                else
+                {
+                    Console.WriteLine("You typed " + numberOfPlayers + ". Please select 1 or 2");
+                    GetNumberOfPlayers();
+                    return numberOfPlayers;
+                }
             }
+
+            //    else if (numberOfPlayers == 1 || numberOfPlayers == 2)
+            //    {
+            //        //}
+
+            //    }
+            //    return numberOfPlayers;
+            //}
             catch
             {
                 Console.WriteLine("You typed an invalid option. Please select 1 or 2.");
-                numberOfPlayers = int.Parse(Console.ReadLine());
+                numberOfPlayers = 0;
+                GetNumberOfPlayers();
                 return numberOfPlayers;
             }
                 
