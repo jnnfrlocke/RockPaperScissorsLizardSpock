@@ -35,9 +35,9 @@ namespace RockPaperScissorsLizardSpock
         public int GetNumberOfPlayers()
         {
             Console.WriteLine("Choose 1 or 2 players");
+            int numberOfPlayers = 0;
             try
             {
-                int numberOfPlayers = 0;
                 while (numberOfPlayers != 1 || numberOfPlayers != 2)
                 {
                     numberOfPlayers = int.Parse(Console.ReadLine());
@@ -53,8 +53,8 @@ namespace RockPaperScissorsLizardSpock
             catch
             {
                 Console.WriteLine("You typed an invalid option. Please select 1 or 2.");
-                GetNumberOfPlayers();
-                return 0;
+                numberOfPlayers = int.Parse(Console.ReadLine());
+                return numberOfPlayers;
             }
                 
             
@@ -83,52 +83,21 @@ namespace RockPaperScissorsLizardSpock
             bool playerOneWin;
             bool playerTwoWin;
 
-            if (playerOneChoice == "rock" && (playerTwoChoice == "lizard" || playerTwoChoice == "scissors"))
+            if (((playerOneChoice != "rock") && (playerOneChoice != "paper") && (playerOneChoice != "scissors") && (playerOneChoice != "lizard") && (playerOneChoice != "spock")) || ((playerTwoChoice != "rock") && (playerTwoChoice != "paper") && (playerTwoChoice != "scissors") && (playerTwoChoice != "lizard") && (playerTwoChoice != "spock")))
             {
-                playerOneWin = true;
-                playerTwoWin = false;
-            }
-            else if (playerOneChoice == "paper" &&(playerTwoChoice == "rock" || playerTwoChoice == "spock"))
-            {
-                playerOneWin = true;
-                playerTwoWin = false;
-            }
-            else if (playerOneChoice == "scissors" && (playerTwoChoice == "paper" || playerTwoChoice == "lizard"))
-            {
-                playerOneWin = true;
-                playerTwoWin = false;
-            }
-            else if (playerOneChoice == "lizard" && (playerTwoChoice == "spock" || playerTwoChoice == "paper"))
-            {
-                playerOneWin = true;
-                playerTwoWin = false;
-            }
-            else if (playerOneChoice == "spock" && (playerTwoChoice == "scissors" || playerTwoChoice == "rock"))
-            {
-                playerOneWin = true;
-                playerTwoWin = false;
-            }
-            else if (playerTwoChoice == "rock" && (playerOneChoice == "lizard" || playerOneChoice == "scissors"))
-            {
+                Console.WriteLine("You entered an invalid answer.");
+                CompareChoices();
                 playerOneWin = false;
-                playerTwoWin = true;
+                playerTwoWin = false;
             }
-            else if (playerTwoChoice == "paper" && (playerOneChoice == "rock" || playerOneChoice == "spock"))
+
+            else if ((playerOneChoice == "rock" && (playerTwoChoice == "lizard" || playerTwoChoice == "scissors")) || (playerOneChoice == "paper" && (playerTwoChoice == "rock" || playerTwoChoice == "spock")) || (playerOneChoice == "scissors" && (playerTwoChoice == "paper" || playerTwoChoice == "lizard")) || (playerOneChoice == "lizard" && (playerTwoChoice == "spock" || playerTwoChoice == "paper")) || (playerOneChoice == "spock" && (playerTwoChoice == "scissors" || playerTwoChoice == "rock")))
             {
-                playerOneWin = false;
-                playerTwoWin = true;
+                playerOneWin = true;
+                playerTwoWin = false;
             }
-            else if (playerTwoChoice == "scissors" && (playerOneChoice == "paper" || playerOneChoice == "lizard"))
-            {
-                playerOneWin = false;
-                playerTwoWin = true;
-            }
-            else if (playerTwoChoice == "lizard" && (playerOneChoice == "spock" || playerOneChoice == "paper"))
-            {
-                playerOneWin = false;
-                playerTwoWin = true;
-            }
-            else if (playerTwoChoice == "spock" && (playerOneChoice == "scissors" || playerOneChoice == "rock"))
+            
+            else if ((playerTwoChoice == "rock" && (playerOneChoice == "lizard" || playerOneChoice == "scissors")) || (playerTwoChoice == "paper" && (playerOneChoice == "rock" || playerOneChoice == "spock")) || (playerTwoChoice == "scissors" && (playerOneChoice == "paper" || playerOneChoice == "lizard")) || (playerTwoChoice == "lizard" && (playerOneChoice == "spock" || playerOneChoice == "paper")) || (playerTwoChoice == "spock" && (playerOneChoice == "scissors" || playerOneChoice == "rock")))
             {
                 playerOneWin = false;
                 playerTwoWin = true;
